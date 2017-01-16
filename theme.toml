@@ -5,8 +5,8 @@ name = "Relax"
 license = "MIT"
 licenselink = "https://github.com/decached/hugo-relax/blob/master/LICENSE.md"
 description = "A minimalist, free and open-source Hugo theme for creators, developers and casual bloggers."
-homepage = "https://decached.com/projects/hugo-relax"
-tags = ["minimalist", "blog", "projects"]
+homepage = "https://decached.com/code/hugo-relax"
+tags = ["minimalist", "blog"]
 features = ["google tag manager", "responsive"]
 min_version = 0.18
 

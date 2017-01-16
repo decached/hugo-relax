@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+<div class="container-fluid nopadding blank-space">
+    {{ if .Params.Image }}<img src="{{ .Params.Image }}" class="img-responsive">{{ end }}
+</div>
+<div class="container-fluid nopadding blank-space">
+    <div class="post-title row text-center">
+        <h1>{{ .Title }}</h1>
+        <h5>{{ .Params.Description }}</h5>
+    </div>
+    <div class="post-content row text-justify">
+        {{ .Content }}
+    </div>
+</div>
+<div class="clearfix"></div>
+{{ partial "footer.html" . }}
