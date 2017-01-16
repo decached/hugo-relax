@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<div class="container-fluid nopadding blank-space">
+    <div class="post-title row text-center">
+        <h1>{{ .Title }}</h1>
+        <h4>{{ .Description }}<h4>
+        <p class="post-meta">{{ .Date.Format "Jan, 2, 2006" }}</p>
+        <p class="post-meta">
+            {{ range .Params.tags }} 
+            <a class="label label-success" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+                {{ upper . }}
+            </a>&nbsp;
+            {{ end }}
+        </p>
+    </div>
+    <div class="post-content row text-justify">
+        {{ .Content }}
+    </div>
+</div>
+{{ partial "footer.html" . }}

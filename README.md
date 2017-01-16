@@ -1,6 +1,6 @@
 # Hugo Relax
 
-A minimalist personal website theme for [Hugo][hugo].
+A minimalistic personal website theme for [Hugo][hugo].
 
 ## Getting Started
 
