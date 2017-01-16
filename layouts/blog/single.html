@@ -3,6 +3,13 @@
     <div class="post-title row text-center">
         <h1>{{ .Title }}</h1>
         <p class="post-meta">{{ .Date.Format "Jan, 2, 2006" }}</p>
+        <p class="post-meta">
+            {{ range .Params.tags }} 
+            <a class="label label-success" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">
+                {{ . }}
+            </a>&nbsp;
+            {{ end }}
+        </p>
     </div>
     <div class="post-content row text-justify">
         {{ .Content }}
