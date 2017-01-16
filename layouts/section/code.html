@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+<div class="container-fluid nopadding blank-space">
+    <div class="post-title row text-center">
+        <h1>Code</h1>
+        <h5>Here are some of the things that I have made.</h5>
+    </div>
+    <div class="post-content row text-justify">
+        <div id="posts"> 
+            {{ range .Data.Pages }}
+            <div class="row margin10">
+                <div class="col-sm-8 col-xs-12">
+                    <h4 class="text-center visible-xs"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                    <h4 class="hidden-xs"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                </div>
+                <div class="col-sm-4 hidden-xs">
+                    <h5 class="pull-right">{{ .Date.Format "Jan 2, 2006" }}</h5>
+                </div>
+                <div class="col-sm-12">
+                    <h5 class="hidden-xs">{{ .Description }}</h5>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}
