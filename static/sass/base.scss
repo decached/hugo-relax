@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+// Our variables
+$base-font-family: 'Raleway', sans-serif;
+$font-family-raleway: 'Raleway', sans-serif;
+$font-family-open-sans: 'Open Sans', sans-serif;
+$font-family-muli: 'Muli', sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 300;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+$spacing-unit:     30px;
+$text-color:       #555;
+$background-color: #fff;
+$brand-color:      #2a7ae2;
+$grey-color:       #eee;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 50%);
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
+$on-mobile:          767px;
+$on-tablet:        991px;
+$on-laptop:        1199px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@import
+        "layout",
+        "syntax"
+;
