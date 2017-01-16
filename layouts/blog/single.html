@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+<div class="container-fluid nopadding blank-space">
+    <div class="post-title row text-center">
+        <h1>{{ .Title }}</h1>
+        <p class="post-meta">{{ .Date.Format "Jan, 2, 2006" }}</p>
+    </div>
+    <div class="post-content row text-justify">
+        {{ .Content }}
+    </div>
+</div>
+{{ partial "footer.html" . }}
