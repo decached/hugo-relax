@@ -50,6 +50,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/blog/">Blog</a></li>
                             {{ range .Site.Menus.main }}
                             <li><a href="{{.URL}}">{{ .Name }}</a></li>
                             {{ end }}

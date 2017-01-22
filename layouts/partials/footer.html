@@ -1,14 +1,31 @@
 <div class="footer text-center">
     <p>
-        <a target="_blank" href="https://twitter.com/{{ .Site.Params.Handle }}"><i class="fa fa-twitter"></i></a>
-        <a target="_blank" href="https://github.com/{{ .Site.Params.Handle }}"><i class="fa fa-github"></i></a>
-        <a target="_blank" href="https://www.linkedin.com/in/{{ .Site.Params.Handle }}"><i class="fa fa-linkedin"></i></a>
+        {{ with .Site.Params.Twitter }}
+        <a target="_blank" href="https://twitter.com/{{ . }}">
+            <i class="fa fa-twitter"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.Github }}
+        <a target="_blank" href="https://github.com/{{ . }}">
+            <i class="fa fa-github"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.Linkedin }}
+        <a target="_blank" href="https://linkedin.com/in/{{ . }}">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.Instagram }}
+        <a target="_blank" href="https://instagram.com/{{ . }}">
+            <i class="fa fa-instagram"></i>
+        </a>
+        {{ end }}
         <!-- <a target="_blank" href="/feed.xml"><i class="fa fa-rss"></i></a> -->
     </p>
     <p><small>&copy; 2010-2017</small></p>
     <p><small>
             Built with <a target="_blank" href="https://gohugo.io">Hugo</a> and
-            <a href="https://github.com/decached/hugo-relax">Relax</a>
+            <a target="_blank" href="https://decached.com/code/hugo-relax">Relax</a>
     </small></p>
 </div>
 <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
